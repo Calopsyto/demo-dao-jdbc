@@ -52,10 +52,10 @@ public class DB {
         }
     }
 
-    public static void closePreparedStatement(PreparedStatement preparedStatement) {
+    public static void closeResultSet(ResultSet resultSet) {
         try {
-            if (preparedStatement != null) {
-                preparedStatement.close();
+            if (resultSet != null) {
+                resultSet.close();
             }
         } catch (SQLException e) {
             throw new DbException(e.getMessage());
